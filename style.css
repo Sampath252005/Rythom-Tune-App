@@ -1,0 +1,330 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+}
+.Container {
+  display: flex;
+  padding: 0 25px;
+  padding-top: 20px;
+}
+.Menu {
+  flex: 0.6;
+  background-color: #262a33;
+  height: 85vh;
+  border-radius: 20px;
+  padding: 20px;
+}
+.SongsContent {
+  flex: 3;
+  height: 90vh;
+  overflow-x: hidden;
+}
+.Name {
+  font-size: 25px;
+  color: orangered;
+  background-color: #262a33;
+  font-weight: bolder;
+  font-family: "Courier New", Courier, monospace;
+}
+.Head {
+  background-color: #262a33;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Head img {
+  height: 45px;
+  width: fit-content;
+  background-color: #262a33;
+}
+.icon {
+  background-color: #262a33;
+}
+.Options {
+  margin-top: 75px;
+  background-color: #262a33;
+  display: flex;
+  gap:25px;
+  flex-direction: column;
+}
+.Home,
+.Category,
+.Artists,
+.Playists {
+  height: 70px;
+  width:auto;
+  background-color: #262a33;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.Home:hover,
+.Category:hover,
+.Artists:hover,
+.Playists:hover,
+.Logout:hover {
+  border-radius: 10px;
+  border: 3px solid #c9d1cb;
+  font-weight: bolder;
+}
+.Home,
+.SongInfo span,
+.Category,
+.Artists,
+.Playists i,
+.Home i,
+.Category i,
+.Artists i,
+.Playists i,
+.Logout i,
+.PlayButtons i,
+.icons i,
+.UserIcon i,
+.SearchBar .HeartIcon i,
+.SettingIcon i,
+div {
+  background-color: transparent; /* Ensure child elements don't have their own background */
+}
+.Logout {
+   position: absolute;
+  margin-top:600px ;
+  display: flex;
+  gap: 50px;
+  padding: 10px;
+  height: 50px;
+  align-items: center;
+  width:280px;
+}
+.SearchBar {
+  display: flex;
+  padding: 20px;
+  gap: 50px;
+  justify-content: center;
+}
+.SearchBar input {
+  width: 500px;
+  height: 50px;
+  border-radius: 50px;
+  color: white;
+  font-size: larger;
+  margin-left: 20px;
+  background-color: #262a33;
+}
+.SearchBar ::placeholder {
+  text-align: center;
+}
+.UserIcon,
+.HeartIcon,
+.SettingIcon {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #262a33;
+  border-radius: 25px;
+}
+.UserIcon:hover,
+.SearchBar .HeartIcon:hover,
+.SettingIcon:hover {
+  transform: scale(1.2);
+}
+.Bottom {
+  display: flex;
+  background-color: #262a33;
+  justify-content: space-around;
+  height: 75px;
+  align-items: center;
+  border-radius: 20px;
+  margin: 0 25px;
+  gap: 200px;
+}
+#MyProgressBar {
+  width: 50vh;
+  cursor: pointer;
+}
+.SongInfo {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.PlayButtons {
+  display: flex;
+  gap: 40px;
+  margin-right: 0px;
+}
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  margin-right: 30px;
+  gap: 20px;
+}
+.icons i,
+.PlayButtons i {
+  cursor: pointer;
+  background-color: #262a33;
+  transition: transform 0.3s ease;
+}
+.icons i:hover,
+.PlayButtons i:hover {
+  transform: scale(1.2);
+  background-color: #262a33;
+}
+.SongInfo {
+  margin-left: 20px;
+}
+.SongInfo img {
+  border-radius: 50px;
+}
+.PlaySongs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.Song-Container {
+  width: 100%;
+  overflow-y: hidden;
+  overflow-x: auto;
+  padding: 20px 20px 20px 20px;
+  scroll-snap-type: x proximity;
+  margin:0px 20px 10px 20px;
+}
+.Song-Container::-webkit-scrollbar {
+  display: none;
+}
+.sliders {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  transition: transform 0.5s ease;
+  width: max-content;
+  animation: slideRotation 20s infinite linear;
+  scroll-snap-type: none;
+}
+.slide {
+  min-width: 200px;
+  border-radius: 15px;
+  background-color: #1c1c1c;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  scroll-snap-align: start;
+  border-radius: 20px;
+  border: 2px solid;
+  /* position: relative; */
+}
+.slide img {
+  width: 30vh;
+  height: auto;
+  display: block;
+}
+.slide:hover {
+  border: 5px solid #ee4b2b;
+  transform: scale(1.1);
+  box-shadow: 0 0 100px 50px black;
+  z-index: 10;
+  /* margin: 25px; */
+}
+.info p,
+h2 {
+  position: relative;
+  left: 20px;
+  background-color: transparent;
+}
+
+.info i {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: transparent;
+}
+/* Ensure .SongList can hold the horizontally scrollable content */
+.SongList {
+  width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory; /* Fix for scroll snapping */
+}
+
+/* Ensure .slider_songs is able to be scrolled horizontally */
+.slider_songs {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  height: 300px;
+  transition: transform 0.5s ease;
+  width: max-content;
+  animation: slideRotation 20s infinite linear;
+  scroll-snap-type: none;
+  margin-left: 20px;
+  padding: 10px;
+}
+
+/* Style for each song slide item */
+.song_slide {
+  width: 200px;
+  border-radius: 15px;
+  background-color: #1c1c1c;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  scroll-snap-align: start;
+  border-radius: 20px;
+  border: 2px solid;
+}
+.song_slide:hover {
+  border: 5px solid #ee4b2b;
+  transform: scale(1.1);
+  box-shadow: 0 0 250px 50px black;
+  z-index: 10;
+}
+
+/* Style for images inside each slide */
+.song_slide img {
+  width: 100%;
+  height: auto; /* Keep the aspect ratio */
+}
+.SongList::-webkit-scrollbar {
+  display: none;
+}
+.SongList h2 {
+  margin: 10px;
+}
+.info i:hover {
+  transform: scale(1.2);
+}
+.Heart-Icon{
+  color: #f1f4f8
+}
+.account {
+  width: 150px;
+  height: 50px;
+  background-color: lightblue;
+  color: black;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 5px;
+  position: absolute;
+  top: 100%; /* Moves it right below the .UserIcon */
+  left: 50%;
+  transform: translateX(-50%); /* Centers it */
+  display: none; /* Initially hidden */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow */
+  z-index: 10; /* Ensures it appears above other elements */
+}
+
